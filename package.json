@@ -1,0 +1,12 @@
+{
+  "name": "cli_crud",
+  "version": "1.0.0",
+  "description": "Day 1 - JS CLI CRUD APP",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
