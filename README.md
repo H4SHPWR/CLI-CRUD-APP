@@ -5,6 +5,7 @@ This is a simple CLI application built in Node.js that allows users to:
 - View items
 - Delete items
 - Clear all items
+- Update item
 
 ## How to Run
 1. Clone the repo: `git clone <repo-link>`
