@@ -7,7 +7,7 @@ const items = []
 
 // Function to display and handle the main menu
 function mainMenu() {
-    rl.question('\n 1. Add item \n 2. View items \n 3. Delete item \n 4. Clear All \n 5. Exit \n\n > Pick Number: ', (answer) => {
+    rl.question('\n 1. Add item \n 2. View items \n 3. Delete item \n 4. Clear All \n 5. Update Item \n 6. Exit \n\n > Pick Number: ', (answer) => {
     
         if (answer == '1') {
             rl.question('Which item do you want to store? ', (item) => {
@@ -48,6 +48,20 @@ function mainMenu() {
         }
 
         if (answer == '5') {
+            rl.question('Which item do you want to update? ', (update) => {
+                let index = items.indexOf(update.toLowerCase())
+                if (index !== -1) {
+                    rl.question('What is the new item? ', (new_item) => {
+                       items[index] = new_item
+                       mainMenu()
+                    })
+                } else {
+                    console.log('Item not found');
+                }
+            });
+        };
+
+        if (answer == '6') {
             rl.close();
         }
     });
